@@ -8,7 +8,7 @@ class App < Sinatra::Base
 
   post '/' do
 
-    @analyzed_text = TextAnalyzer.new(params.keys.join.to_s)
+    @analyzed_text = TextAnalyzer.new(params.values.join.to_s)
     binding.pry
     erb :results
   end
